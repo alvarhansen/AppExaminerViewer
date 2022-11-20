@@ -1,0 +1,20 @@
+name: ViewerApp
+options:
+  bundleIdPrefix: com.example
+packages:
+  AppExaminerViewerCore:
+    path: ../
+targets:
+  AppExaminerApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources: Sources
+    dependencies:
+      - package: AppExaminerViewerCore
+    info:
+      path: Info.plist
+      properties:
+        LSRequiresIPhoneOS: true
+        UILaunchStoryboardName: "Launch Screen.storyboard"
+        # NSLocalNetworkUsageDescription: "NSLocalNetworkUsageDescription"
